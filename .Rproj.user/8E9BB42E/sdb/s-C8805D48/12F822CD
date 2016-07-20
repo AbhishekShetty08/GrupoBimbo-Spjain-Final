@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "# Libraries\nlibrary(RMySQL)\n\n################ Model Building ################\n\n# Database connection String\ncon <- dbConnect(MySQL(), \n                 user='root', \n                 password='', \n                 dbname='bimbo', \n                 host='localhost')\ndbListTables(con) #list tables in database\ndbListFields(con,\"training_set\") #list fields in table\n\na<-5\nquery<-paste(\"Select * FROM training_set LIMIT \", a, \";\")\ndbGetQuery(con,query)\n\n# Create Route DF\nroutedf <- dbGetQuery(con,\"SELECT DISTINCT Route from training_set\")\nproductdf <- dbGetQuery(con,\"SELECT DISTINCT Product from training_set\")\nroute <- matrix(unlist(routedf), ncol = 1, byrow = TRUE)\nproduct <- matrix(unlist(productdf), nrow = 1, byrow = TRUE)\nroute <- as.data.frame(route)\ntable(product,route)\ntypeof(route)\n",
+    "created" : 1469006406836.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3009774688",
+    "id" : "12F822CD",
+    "lastKnownWriteTime" : 1468430017,
+    "last_content_update" : 1468430017,
+    "path" : "F:/GrupoBimbo/code/simple-linear-model-2.R",
+    "project_path" : null,
+    "properties" : {
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

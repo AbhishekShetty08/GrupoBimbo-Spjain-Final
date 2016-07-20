@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "# Import Data\ndata <- read.csv(\"F:/grupo_part2/GrupoBimbo-Spjain-Final/data/data.csv\")\n\n# create training and validation data.\n# I am taking last week of every product as validation set\n\nlibrary(sqldf)\n\ntest <- sqldf(\"Select * from data\")\n",
+    "created" : 1469005552717.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "754836364",
+    "id" : "49AF3D9E",
+    "lastKnownWriteTime" : 1469008748,
+    "last_content_update" : 1469008910452,
+    "path" : "F:/grupo_part2/GrupoBimbo-Spjain-Final/code/model-1.R",
+    "project_path" : "code/model-1.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
